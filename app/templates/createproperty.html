@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block main %}
+{% block title %}New Property{% endblock%}
+<div class="form-container">
+    <div class="new-property">
+        <h2>Add New Property<h2>
+    </div>
+    <form action="{{ url_for('create_property') }}" method="POST" enctype="multipart/form-data" >
+        {{form.csrf_token }}
+        {{form.file}}
+        
+        <div class="title-pt">
+            <h6>{{ form.title.label}}<h6>
+            {{ form.title(placeholder="Madison Gardens Mansion", class="form-control") }}
+            {% for error in form.title.errors %}
+            <span> {{error}} </span>
+            {%endfor%}
+        </div>
+    
+        <div class="description-pt">
+            <h6>{{form.description.label}}<h6>
+            {{ form.description(placeholder="eg. Lovely Four Bedroom House with spacious backyard", class="form-control")}}
+            {% for error in form.description.errors %}
+            <span> {{error}} </span>
+            {%endfor%}
+        </div>
+    
+        <div class="rooms-pt">
+            <div class="bed">
+            <h6>{{form.bedrooms.label}}<h6>
+            {{ form.bedrooms(placeholder="Eg. 4", class="form-control") }}
+            {% for error in form.bedrooms.errors %}
+            <span> {{error}} </span>
+            {%endfor%}
+            </div>
+            <div class="bath">
+            <h6>{{form.bathrooms.label}}<h6>
+            {{ form.bathrooms(placeholder="Eg. 2", class="form-control") }}
+            {% for error in form.bathrooms.errors %}
+            <span> {{error}} </span>
+            {%endfor%}
+            </div>
+        </div>
+    
+        <div class="type_price">
+            <div class="price-pt">
+                <h6>{{form.price.label}}<h6>
+                {{ form.price(placeholder="Eg. 1,000,000", class="form-control") }}
+                {% for error in form.price.errors %}
+                <span> {{error}} </span>
+                {%endfor%}
+            </div>
+            <div class="type-pt">
+            <h6>{{form.property_type.label}} (House or Apartment)<h6>
+            {{ form.property_type(placeholder="eg.House", class="form-control") }}
+            {% for error in form.property_type.errors %}
+            <span> {{error}} </span>
+            {%endfor%}
+        </div>
+
+        </div>
+            <div class="location-pt">
+                <h6><strong>Property</strong> {{form.location.label}}<h6>
+                {{ form.location(placeholder="9 Sweet Meadows, Kingston", class="form-control") }}
+                {% for error in form.location.errors %}
+                <span> {{error}} </span>
+                {%endfor%}
+            </div>
+
+        
+        <div class="photo-pt">
+            <h6>{{form.photo.label}}<h6>
+                <p>Upload Photo</p>
+                {{ form.photo(class="form-control") }}
+            {% for error in form.photo.errors %}
+            <span> {{error}} </span>
+            {%endfor%}
+        </div>
+        <div class="btn_sub">
+            <button type="submit">Add Property</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

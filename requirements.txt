@@ -10,3 +10,14 @@ packaging==23.2
 python-dotenv==1.0.1
 Werkzeug==3.0.1
 zipp==3.13.0
+alembic==1.9.4
+Flask-Login==0.6.2
+Flask-Migrate==4.0.4
+Flask-SQLAlchemy==3.0.3
+Flask-WTF==1.2.1
+greenlet==3.0.3
+Mako==1.2.4
+psycopg2==2.9.9
+SQLAlchemy==2.0.4
+typing_extensions==4.5.0
+WTForms==3.0.1

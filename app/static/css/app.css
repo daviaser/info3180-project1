@@ -1,3 +1,271 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Spectral&display=swap');
+
+
 body {
     padding-top: 5rem;
+    font-family: 'Spectral', serif;
+}
+form{
+    background-color: white;
+    max-width: 900px;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.rooms-pt{
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.rooms-pt .bed{
+    display: inline-block;
+    margin-right: 100px;
+}
+.rooms-pt .bath{
+    display: inline-block;
+}
+
+.type_price{
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.price-pt{
+    display: inline-block;
+    margin-right: 100px;
+}
+.type-pt{
+    display: inline-block;
+}
+
+form label{
+    font-weight: bold;
+}
+
+.form-control{
+    margin-bottom: 15px;
+}
+
+.btn_sub button{
+    background-color: #2796e5;
+    color: white;
+    outline: none;
+    border: none;
+    padding: 10px;
+}
+
+.properties{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 18px;
+    
+}
+
+.photogrid-card{
+    display: grid;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    width: 410px;
+    height: auto;
+    margin-top: 7px;
+    
+}
+
+.photogrid-card .property-info{
+    padding: 10px;
+}
+.photogrid-card .property-info h3{
+    margin: 8px;
+}
+
+.photogrid-card img{
+    padding: 4px;
+    margin-bottom: 10px;
+    height: 235px;
+    width: 100%;
+    object-fit: cover;
+}
+.photogrid-card:hover{
+    box-shadow: 0px 0px 20px rgba(141, 139, 139, 0.911);
+    background-color:rgb(235, 240, 246);
+}
+
+.photogrid-card a{
+    color: white;
+    background-color:#af8bde;
+    height: 40px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-top:15px;
+    padding: 0;
+}
+
+.photogrid-card .property-info{
+    padding: 0 10px;
+}
+
+.photogrid-card h3{
+    font-weight: bold;
+    font-size: 22px;
+    margin: 0;
+}
+.photogrid-card .location{
+    font-size: 15px;
+    border-radius: 15px;
+    padding: 3px 10px;
+    color: grey;
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    margin-bottom: 3px;
+    margin-top: 4px;
+
+}
+.photogrid-card .price{
+    display: flex;
+    align-items: center;
+    background-color:#FDE74C;
+    margin: 5px;
+    margin-left:10px;
+    margin-top:15px;
+    width: 190px;
+    height:30px;
+    font-size: 15px;
+    border-radius: 15px;
+    padding: 4px 10px;
+    color: grey;
+}
+
+.photogrid-card i{
+    color: grey;
+}
+
+.photogrid-card p{
+    margin: 0;
+}
+
+.property{
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    max-width: 850px;
+    min-height: 300px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    justify-self:center;
+}
+.property:hover{
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.property p{
+    margin: 0;
+}
+
+.property img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.property .property-details{
+    justify-content: center;
+    height: auto;
+    padding: 20px;
+}
+
+.property-details .mail-icon i{
+    color: white;
+}
+
+.property h3{
+    font-weight: bold;
+    font-size: 22px;
+    margin: 0;
+}
+
+.property .tags{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    margin-right: 5px;
+}
+
+.property .tags p{
+    margin: 8px 10px 0 0;
+    font-size: small;
+    border-radius: 15px;
+    display: inline-flex;
+    padding: 3px 10px;
+    font-weight: 600;
+}
+
+.property .tags .price i, .typ i{
+    font-size: medium;
+}
+.property .tags .pri{
+    color:rgb(109, 108, 108);
+    background-color: #65DEF1;
+}
+
+.property .tags .typ{
+    color:rgb(109, 108, 108);
+    background-color:#FADF63;
+}
+
+.property .description{
+    margin-bottom: 10px;
+}
+
+.property .rooms{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.property .rooms div{
+    margin-top:15px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.property .bedrooms{
+    display: flex;
+}
+.property .bathrooms{
+    display: flex;
+}
+.property .location{
+    display: flex;
+    margin-bottom: 15px;
+}
+i{
+    color: grey;
+    margin-right: 3px;
+}
+
+.property button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    color: white;
+    border-radius: 3px;
+    width: 170px;
+    height: 40px;
+    background-color:#af8bde;
+
+}
+
+.property button:hover{
+    background-color: #65DEF1;
 }
